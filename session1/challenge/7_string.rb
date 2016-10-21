@@ -6,9 +6,12 @@
 
 def pirates_say_arrrrrrrrr(string)
     new_string = ""
-    string.size.times do |index|
-        if string["r"]
-            new_string << string["r"] + 1
+    for i in 0..string.length - 2
+        char = string[i]
+        if char == "r" || char == "R"
+            to_print = string[i + 1]
+            new_string << to_print
         end
     end
+    return new_string
 end

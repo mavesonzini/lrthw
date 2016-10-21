@@ -9,10 +9,14 @@
 
 def odds_and_evens(string, return_odds)
     new_string = ""
-    string.size.times do |index|
-        next if return_odds && index.even?
-        next if !return_odds && index.odd?
-        new_string << string[index]
+    for i in 0..string.length - 1
+        char = string[i]
+        if return_odds && i % 2 == 1
+            new_string << char
+        end
+        if !return_odds && i % 2 == 0
+            new_string << char
+        end
     end
     return new_string
 end
