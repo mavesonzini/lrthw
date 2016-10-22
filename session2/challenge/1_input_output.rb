@@ -8,12 +8,11 @@
 # "11\n7\n18\n" to standard output.
 
 def sum_difference_product
-    puts "give me 1 int"
-    int1 = gets.chomp
-    puts "give me another int"
-    int2 = gets.chomp
-    sum = int1 + int2
-    difference = int1 - int2
-    product = int1 * int2
-    return sum, difference, product
+    int1, int2 = gets.split.map { |num| num.to_i }
+    sum = (int1 + int2).to_s
+    difference = (int1 - int2).to_s
+    product = (int1 * int2).to_s
+    puts sum
+    puts difference
+    puts product
 end
