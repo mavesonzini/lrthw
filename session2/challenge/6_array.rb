@@ -14,3 +14,19 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
+
+def is_prime?(number)
+    if number < 2
+        return false
+    end
+    for might_be_prime in 2..number - 1
+        if number % might_be_prime == 0
+            return false
+        end
+    end
+    return true
+end
+
+def prime_chars?(array_of_strings)
+    is_prime?(array_of_strings.join.length)
+end
