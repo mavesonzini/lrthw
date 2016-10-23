@@ -7,3 +7,18 @@
 # get_squares [25, 4, 9, 6, 50, 16, 5] # => [4, 5]
 
 # This time you will have to define the method, it's called: get_squares
+
+def get_squares(array)
+    square_array = []
+    for number in array
+        square = number * number
+        for potential_square in array
+            if square == potential_square
+                square_array << number
+                break
+            end
+        end
+        
+    end
+    return square_array.sort
+end
