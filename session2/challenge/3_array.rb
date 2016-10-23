@@ -7,5 +7,11 @@
 
 class String
   def every_other_char
+      char = self[i]
+      for i in 0..self.length - 1
+          if i % 2 == 1
+              puts char
+          end
+      end
   end
 end
