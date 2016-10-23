@@ -8,3 +8,18 @@
 # alternate_words("Lorem ipsum dolor sit amet.")  # => ["Lorem", "dolor", "amet"]
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
+
+def alternate_words(string)
+    '!@$#%^&*()-=_+[]:;,./<>?\\|'.split(//).each do |char|
+        string = string.gsub(char, ' ')
+    end
+    array_of_strings = string.split
+    final_array = []
+    for i in 0..array_of_strings.count - 1
+        if i % 2 == 0
+            word = array_of_strings[i]
+            final_array << word
+        end
+    end
+    return final_array
+end
