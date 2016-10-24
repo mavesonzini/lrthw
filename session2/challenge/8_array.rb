@@ -5,3 +5,22 @@
 # got_three? ['a', 'a', 'b']  # => false
 # got_three? ['a', 'a', 'a']  # => true
 # got_three? [1, 2, 1, 1]     # => false
+
+
+def got_three?(array)
+count = 0
+item = ""
+    for character in array
+        item = character
+        for possible_double in array
+            if item == possible_double && item == possible_double + 1
+            count = count + 3
+            end
+        end
+        if count == 3
+            return true
+            break
+        end
+    end
+    
+end
